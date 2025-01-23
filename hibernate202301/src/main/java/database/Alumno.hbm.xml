@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23 ene 2025 14:10:38 by Hibernate Tools 6.5.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="adat5" name="database.Alumno" optimistic-lock="none" table="Alumno">
+        <id name="idAlumno" type="string">
+            <column length="255" name="idAlumno"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="database.Profesor" fetch="select" name="profesor">
+            <column length="255" name="profesor_id"/>
+        </many-to-one>
+        <property name="nif" type="string">
+            <column length="255" name="NIF" not-null="true"/>
+        </property>
+        <property name="nombre" type="string">
+            <column length="255" name="nombre" not-null="true"/>
+        </property>
+        <property name="apellido1" type="string">
+            <column length="255" name="apellido1" not-null="true"/>
+        </property>
+        <property name="apellido2" type="string">
+            <column length="255" name="apellido2"/>
+        </property>
+        <property name="email" type="string">
+            <column length="255" name="email"/>
+        </property>
+        <property name="direccion" type="string">
+            <column length="255" name="direccion"/>
+        </property>
+        <property name="codigoPostal" type="java.lang.Integer">
+            <column name="codigoPostal"/>
+        </property>
+        <property name="municipio" type="string">
+            <column length="255" name="municipio"/>
+        </property>
+        <property name="provincia" type="string">
+            <column length="255" name="provincia"/>
+        </property>
+        <property name="beca" type="string">
+            <column length="255" name="beca"/>
+        </property>
+    </class>
+</hibernate-mapping>

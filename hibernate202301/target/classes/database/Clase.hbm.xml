@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23 ene 2025 14:10:38 by Hibernate Tools 6.5.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="adat5" name="database.Clase" optimistic-lock="none" table="Clase">
+        <id name="codigo" type="string">
+            <column length="255" name="codigo"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="planta" type="int">
+            <column name="planta" not-null="true"/>
+        </property>
+        <property name="materia" type="string">
+            <column length="255" name="materia" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="false" lazy="true" name="cursos" table="Clases_Cursos">
+            <key>
+                <column length="255" name="id_clase" not-null="true"/>
+            </key>
+            <many-to-many entity-name="database.Curso">
+                <column name="id_curso" not-null="true"/>
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

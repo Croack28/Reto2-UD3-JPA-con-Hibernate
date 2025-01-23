@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+  <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+  <property name="hibernate.connection.password">asdf1234</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost/adat5</property>
+  <property name="hibernate.connection.username">dam2</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.hbm2ddl.auto">none</property>
+  <property name="hibernate.search.autoregister_listeners">true</property>
+  <property name="hibernate.validator.apply_to_ddl">false</property>
+  <mapping resource="database/Alumno.hbm.xml"/>
+  <mapping resource="database/Curso.hbm.xml"/>
+  <mapping resource="database/Profesor.hbm.xml"/>
+  <mapping resource="database/Clase.hbm.xml"/>
+  <mapping class="org.apache.maven.hibernate202301.App"/>
+ </session-factory>
+</hibernate-configuration>
