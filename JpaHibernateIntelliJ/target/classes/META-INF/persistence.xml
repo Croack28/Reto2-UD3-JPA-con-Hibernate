@@ -16,8 +16,8 @@
  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
  <!-- Cambiar el valor para el driver de DB que utilizemos ( en este caso, org.mariadb) -->
  <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
- <property name="jakarta.persistence.jdbc.user" value="root" />
- <property name="jakarta.persistence.jdbc.password" value="Miprima2+" />
+ <property name="jakarta.persistence.jdbc.user" value="dam2" />
+ <property name="jakarta.persistence.jdbc.password" value="asdf.1234" />
  <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost/adat4?allowPublicKeyRetrieval=true" />
  <!-- Poner esta linea de codigo para que cree la tabla directamente si no existe -->
  <property name="jakarta.persistence.schema-generation.database.action" value="create"></property>
